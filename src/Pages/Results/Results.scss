@@ -1,0 +1,77 @@
+.my-collapse {
+  background: #fff;
+  border: 1px solid #2964c2;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 4px 0px #2964c21a, -1px 6px 6px 0px #2964c217,
+    -3px 14px 9px 0px #2964c20d, -5px 25px 10px 0px #2964c203,
+    -8px 39px 11px 0px #2964c200;
+}
+
+.my-collapse .ant-collapse-item .ant-collapse-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  border: none;
+  width: 100%;
+}
+
+.my-collapse .ant-collapse-header .ant-collapse-header-text {
+  display: block;
+  width: 90%;
+}
+
+.my-collapse .ant-collapse-content {
+  border: none;
+}
+
+.my-collapse .ant-collapse-header-text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #2964c2;
+}
+
+.my-table .ant-table-thead > tr {
+  background: linear-gradient(91.88deg, #0e449b 0%, #4284eb 100%);
+}
+
+.my-table .ant-table-thead > tr > .ant-table-cell {
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: white;
+
+  &::before {
+    display: none;
+  }
+}
+
+.my-table .ant-table-thead > tr > .ant-table-cell {
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: white;
+
+  &::before {
+    display: none;
+  }
+}
+
+.my-table table {
+  background: #e8f1ff;
+}
+
+.my-table .ant-table-row {
+  color: #2964c2;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  td:nth-child(3) {
+    color: #14bd4e;
+  }
+  td:nth-child(4) {
+    color: #bd1414;
+  }
+}
