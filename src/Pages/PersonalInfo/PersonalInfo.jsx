@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import _myInfo from "./_myInfo";
-import _workActivity from "./_workActivity";
-import _forApplication from "./_forApplication";
 
 const PersonalInfo = () => {
-  const [change, setChange] = useState("myInfo");
   return (
     <section>
       <div>
@@ -29,52 +26,15 @@ const PersonalInfo = () => {
           <ul className="flex items-center gap-5">
             <li>
               <button
-                className={`${
-                  change === "myInfo"
-                    ? "bg-[#2964c2] text-white"
-                    : "text-[#2964c2] bg-[transparent]"
-                } inline-block py-3 px-4 rounded-sm cursor-pointer`}
-                onClick={() => setChange("myInfo")}
+                className={`bg-[#2964c2] text-white inline-block py-3 px-4 rounded-sm cursor-pointer`}
               >
                 Шахсий маълумотларим
-              </button>
-            </li>
-            <li>
-              <button
-                className={`${
-                  change === "work"
-                    ? "bg-[#2964c2] text-white"
-                    : "text-[#2964c2] bg-[transparent]"
-                } inline-block py-3 px-4 text-[#2964c2] rounded-sm cursor-pointer`}
-                onClick={() => setChange("work")}
-              >
-                Меҳнат фаолияти
-              </button>
-            </li>
-            <li>
-              <button
-                className={`${
-                  change === "application"
-                    ? "bg-[#2964c2] text-white"
-                    : "text-[#2964c2] bg-[transparent]"
-                } inline-block py-3 px-4 text-[#2964c2] rounded-sm cursor-pointer`}
-                onClick={() => setChange("application")}
-              >
-                Мурожаат учун
               </button>
             </li>
           </ul>
         </div>
         <div className="w-full h-[1px] bg-[#2964c2] my-6"></div>
-
-        {change === "myInfo" ? (
-          <_myInfo />
-        ) : change === "work" ? (
-          <_workActivity />
-        ) : (
-          <_forApplication />
-        )}
-
+        <_myInfo />
         <p className="text-[#2964c2] font-medium text-center text-xl mt-6">
           *Малумотларингиз давлат базасидан олинган бўлиб уларни таҳрирлаш
           имкони йўқ

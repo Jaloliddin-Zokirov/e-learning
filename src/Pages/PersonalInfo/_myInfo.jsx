@@ -5,7 +5,7 @@ const _myInfo = () => {
     <ul className="w-full grid grid-cols-3 gap-x-8 gap-y-6">
       <li>
         <p className="mb-1">Исми</p>
-        <p className="w-full max-w-[278px] overflow-x-scroll whitespace-nowrap px-4 py-2.5 border border-[#bccbe8] bg-[#e8f1ff] rounded-lg text-[#596173] font-medium text-lg">
+        <p className="w-full max-w-[278px] overflow-x-scroll whitespace-nowrap px-4 py-2.5 border border-[#bccbe8] bg-[#e8f1ff] rounded-lg text-[#596173] font-medium text-lg scrollbar-hide">
           AKMAL
         </p>
       </li>

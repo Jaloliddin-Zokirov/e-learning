@@ -7,7 +7,12 @@ const Footer = () => {
       <div className="flex items-start justify-between flex-wrap gap-4 max-w-[90%] mx-auto pt-8 px-4 pb-16">
         <div>
           <Link to={"/"} className="flex items-center gap-2.5 w-[244px] mb-8">
-            <img src="https://e-learning.istc.uz/assets/logo-CP4jwA-y.svg" width={51} height={47} alt="site logo" />
+            <img
+              src="https://e-learning.istc.uz/assets/logo-CP4jwA-y.svg"
+              width={51}
+              height={47}
+              alt="site logo"
+            />
             <p className="text-[0.6875rem] font-bold text-white">
               ИЖТИМОИЙ ҲИМОЯ ТИЗИМИ ХОДИМЛАРИНИНГ МАЛАКАСИНИ ОШИРИШ МАРКАЗИ
             </p>
@@ -72,34 +77,113 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-            <img className="rounded-xl" src="https://e-learning.istc.uz/assets/location-3N-TDsON.png" width={360} height={187} alt="" />
-            <p className="text-white font-semibold text-[0.75rem] underline">Тошкент   шаҳри,   Чилонзор   тумани,   Нурҳон   кўчаси,   21-уй</p>
+          <iframe
+            className="rounded-xl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.6099937033136!2d69.21651308245748!3d41.273826899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a6bb3fcc899%3A0xc7267858e6e3f819!2sNurkhan%20St%2021%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1742384140507!5m2!1sen!2s"
+            width="360"
+            height="187"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p className="text-white font-semibold text-[0.75rem] underline">
+            Тошкент шаҳри, Чилонзор тумани, Нурҳон кўчаси, 21-уй
+          </p>
         </div>
         <ul className="flex flex-col gap-4">
-            <li>
-                <p className="flex items-center gap-2 text-[#00ff58] mb-2 font-medium text-[1rem]">
-                <svg data-v-769a8363="" xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-phone" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" color="var(--success)">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path> </svg>
-                Телефон
-                </p>
-                <a className="text-[0.87rem] text-white" href="tel:+998555120066">+998 55 512 00 66</a>
-            </li>
-            <li>
-                <p className="flex items-center gap-2 text-[#00ff58] mb-2 font-medium text-[1rem]">
-                <svg data-v-769a8363="" xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-mail" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" color="var(--success)">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>   <path d="M3 7l9 6l9 -6"></path> </svg>
-                маил
-                </p>
-                <div className="flex flex-col">
-                <a className="text-[0.87rem] text-white" href="mailto:ihmamarkaz@exat.uz">ihmamarkaz@exat.uz</a>
-                <a className="text-[0.87rem] text-white" href="mailto:info@istc.uz">info@istc.uz</a>
-                </div>
-            </li>
-            <li>
-                <p className="flex items-center gap-2 text-[#00ff58] mb-2 font-medium text-[1rem]">
-                <svg data-v-769a8363="" xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-world" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" color="var(--success)">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>   <path d="M3.6 9h16.8"></path>   <path d="M3.6 15h16.8"></path>   <path d="M11.5 3a17 17 0 0 0 0 18"></path>   <path d="M12.5 3a17 17 0 0 1 0 18"></path> </svg>
-                wебсите
-                </p>
-                <a className="text-[0.87rem] text-white" href="https://www.istc.uz">www.istc.uz</a>
-            </li>
+          <li>
+            <p className="flex items-center gap-2 text-[#00ff58] mb-2 font-medium text-[1rem]">
+              <svg
+                data-v-769a8363=""
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-tabler icon-tabler-phone"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                color="var(--success)"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>{" "}
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>{" "}
+              </svg>
+              Телефон
+            </p>
+            <a className="text-[0.87rem] text-white" href="tel:+998555120066">
+              +998 55 512 00 66
+            </a>
+          </li>
+          <li>
+            <p className="flex items-center gap-2 text-[#00ff58] mb-2 font-medium text-[1rem]">
+              <svg
+                data-v-769a8363=""
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-tabler icon-tabler-mail"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                color="var(--success)"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>{" "}
+                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>{" "}
+                <path d="M3 7l9 6l9 -6"></path>{" "}
+              </svg>
+              маил
+            </p>
+            <div className="flex flex-col">
+              <a
+                className="text-[0.87rem] text-white"
+                href="mailto:ihmamarkaz@exat.uz"
+              >
+                ihmamarkaz@exat.uz
+              </a>
+              <a
+                className="text-[0.87rem] text-white"
+                href="mailto:info@istc.uz"
+              >
+                info@istc.uz
+              </a>
+            </div>
+          </li>
+          <li>
+            <p className="flex items-center gap-2 text-[#00ff58] mb-2 font-medium text-[1rem]">
+              <svg
+                data-v-769a8363=""
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-tabler icon-tabler-world"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                color="var(--success)"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>{" "}
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>{" "}
+                <path d="M3.6 9h16.8"></path> <path d="M3.6 15h16.8"></path>{" "}
+                <path d="M11.5 3a17 17 0 0 0 0 18"></path>{" "}
+                <path d="M12.5 3a17 17 0 0 1 0 18"></path>{" "}
+              </svg>
+              wебсите
+            </p>
+            <a className="text-[0.87rem] text-white" href="https://www.istc.uz">
+              www.istc.uz
+            </a>
+          </li>
         </ul>
       </div>
     </footer>

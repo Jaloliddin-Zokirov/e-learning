@@ -5,6 +5,11 @@
 *::after {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 html {
@@ -13,7 +18,8 @@ html {
   overflow: hidden;
 }
 
-body, #root {
+body,
+#root {
   display: flex;
   flex-direction: column;
   height: 100vh;
