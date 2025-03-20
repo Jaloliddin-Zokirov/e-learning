@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
         <div>
           <iframe
-            className="rounded-xl"
+            className="rounded-xl w-full max-w-[320px] sm:max-w-[360px]"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.6099937033136!2d69.21651308245748!3d41.273826899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a6bb3fcc899%3A0xc7267858e6e3f819!2sNurkhan%20St%2021%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1742384140507!5m2!1sen!2s"
             width="360"
             height="187"

@@ -29,6 +29,17 @@
   font-weight: 500;
   font-size: 20px;
   color: #2964c2;
+
+  @media only screen and (max-width: 870px) {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 807px) {
+  .my-collapse .ant-collapse-content-box {
+    padding: 0 16px;
+    overflow-x: scroll;
+  }
 }
 
 .my-table .ant-table-thead > tr {
@@ -45,17 +56,8 @@
   &::before {
     display: none;
   }
-}
-
-.my-table .ant-table-thead > tr > .ant-table-cell {
-  background: transparent;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500;
-  color: white;
-
-  &::before {
-    display: none;
+  @media only screen and (max-width: 870px) {
+    font-size: 0.7rem;
   }
 }
 
@@ -73,5 +75,8 @@
   }
   td:nth-child(4) {
     color: #bd1414;
+  }
+  @media only screen and (max-width: 870px) {
+    font-size: 0.7rem;
   }
 }

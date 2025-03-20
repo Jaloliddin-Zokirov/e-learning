@@ -18,7 +18,7 @@ const PersonalInfo = () => {
             height={122}
             alt="person icon"
           />
-          <h3 className="mb-6 font-medium text-[#2964c2] text-xl">
+          <h3 className="mb-6 text-center font-medium text-[#2964c2] text-xl">
             AKMAL SHERALIYEVICH AMONBOYEV
           </h3>
         </div>

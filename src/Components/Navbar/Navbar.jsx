@@ -16,11 +16,11 @@ const Navbar = ({ isOpen, isClose }) => {
       <div
         className={`${isOpen ? "left-0" : "-left-full"} ${
           onModal ? "max-w-[90px] px-5" : "max-w-[348px] px-6"
-        } absolute z-10 xl:relative xl:left-0 flex flex-col justify-between py-9 w-full h-full bg-[#2964c2] transition-all duration-400 ease-in-out`}
+        } absolute z-40 xl:relative xl:left-0 flex flex-col justify-between py-9 w-full h-full bg-[#2964c2] transition-all duration-400 ease-in-out`}
       >
         {onModal && (
           <span
-            className="absolute top-9 -right-7 px-2 py-5 rounded-r-[24px] bg-[#3964c2] text-white cursor-pointer"
+            className="absolute top-9 -right-7 px-2 py-5 rounded-r-[24px] bg-[#2964c2] text-white cursor-pointer"
             onClick={() => setOnModal(false)}
           >
             <MdKeyboardDoubleArrowRight size={28} />
@@ -29,7 +29,11 @@ const Navbar = ({ isOpen, isClose }) => {
         <div className={`${onModal && "mt-4"} relative`}>
           <div className="flex items-center ">
             <div className="w-full flex items-center gap-4">
-              <Link className="w-[55] h-[51] block" to={"/"}>
+              <Link
+                className="w-[55] h-[51] block"
+                onClick={() => isClose(false)}
+                to={"/"}
+              >
                 <img
                   src="https://e-learning.istc.uz/assets/logo-CP4jwA-y.svg"
                   width={55}
@@ -71,36 +75,42 @@ const Navbar = ({ isOpen, isClose }) => {
           </div>
           <nav className={`${onModal ? "mt-10" : "mt-6"} flex flex-col gap-3`}>
             <Link
+              onClick={() => isClose(false)}
               to={"/"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
               <IoHomeOutline size={26} /> {!onModal && "Home"}
             </Link>
             <Link
+              onClick={() => isClose(false)}
               to={"/personal-info"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
               <RiUserSettingsLine size={26} /> {!onModal && "Personal Info"}
             </Link>
             <Link
+              onClick={() => isClose(false)}
               to={"/education-wrapper"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
               <PiStudent size={26} /> {!onModal && "Education"}
             </Link>
             <Link
+              onClick={() => isClose(false)}
               to={"/results"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
               <LiaAwardSolid size={26} /> {!onModal && "Results"}
             </Link>
             <Link
+              onClick={() => isClose(false)}
               to={"/certificate-programs"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
               <GrCertificate size={26} /> {!onModal && "Certificate Programs"}
             </Link>
             <Link
+              onClick={() => isClose(false)}
               to={"/docs-programs"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
