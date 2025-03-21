@@ -14,6 +14,12 @@
   flex-direction: row-reverse;
   border: none;
   width: 100%;
+  padding: 0.7rem;
+
+  & .ant-collapse-expand-icon {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .my-collapse .ant-collapse-header .ant-collapse-header-text {

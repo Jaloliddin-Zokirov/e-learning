@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 
 const Header = ({ isOpen }) => {
   const [check, setCheck] = useState(false);
+
+  const handleBack = () => {
+    window.history.back();
+  }
   return (
     <header className="w-full mx-auto">
       <div className="relative z-30 w-full text-whit mb-8 p-5 rounded-2xl bg-white shadow-[0px_2px_4px_rgba(41,100,194,0.1),-1px_6px_6px_rgba(41,100,194,0.09),-3px_14px_9px_rgba(41,100,194,0.05),-5px_25px_10px_rgba(41,100,194,0.01),-8px_39px_11px_rgba(41,100,194,0)]">
@@ -62,15 +66,15 @@ const Header = ({ isOpen }) => {
           </button>
         </div>
       </div>
-      <Link
-        className="w-[112px] flex items-center gap-2 mb-2 cursor-pointer font-medium text-xl text-[#2964c2]"
-        to={"/"}
+      <button
+        className="w-[112px] flex items-center gap-2 mb-2 cursor-pointer font-medium text-xl text-[#2964c2] select-none"
+        onClick={handleBack}
       >
         <div className="text-white bg-[#2964c2] w-7 h-7 rounded-full flex flex-col items-center justify-center">
           <IoIosArrowBack />
         </div>
         Орқага
-      </Link>
+      </button>
       {check && <div className="absolute inset-0 z-10 bg-[#00000092]" onClick={() => setCheck(false)}></div>}
     </header>
   );

@@ -22,7 +22,7 @@ const PersonalInfo = () => {
             AKMAL SHERALIYEVICH AMONBOYEV
           </h3>
         </div>
-        <div className="flex items-center rounded-lg p-3 justify-between bg-[#e8f1ff]">
+        {/* <div className="flex items-center rounded-lg p-3 justify-between bg-[#e8f1ff]">
           <ul className="flex items-center gap-5">
             <li>
               <button
@@ -32,8 +32,8 @@ const PersonalInfo = () => {
               </button>
             </li>
           </ul>
-        </div>
-        <div className="w-full h-[1px] bg-[#2964c2] my-6"></div>
+        </div> */}
+        <div className="w-full h-[1px] bg-[#2964c2] mb-6"></div>
         <_myInfo />
         <p className="text-[#2964c2] font-medium text-center text-xl mt-6">
           *Малумотларингиз давлат базасидан олинган бўлиб уларни таҳрирлаш
