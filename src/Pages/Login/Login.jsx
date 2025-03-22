@@ -3,7 +3,7 @@ import { Button, Checkbox, Form, Input } from "antd";
 import { Link } from "react-router-dom";
 import _eri from "../../Components/Eri/Eri";
 
-const Login = () => {
+const Login = React.memo(() => {
   const [form] = Form.useForm();
 
   return (
@@ -96,6 +96,6 @@ const Login = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Login;

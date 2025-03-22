@@ -1,7 +1,7 @@
 import React from "react";
 import _myInfo from "./_myInfo";
 
-const PersonalInfo = () => {
+const PersonalInfo = React.memo(() => {
   return (
     <section>
       <div>
@@ -42,6 +42,6 @@ const PersonalInfo = () => {
       </div>
     </section>
   );
-};
+});
 
 export default PersonalInfo;

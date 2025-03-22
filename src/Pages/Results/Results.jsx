@@ -2,7 +2,7 @@ import React from "react";
 import { Collapse, Table } from "antd";
 import "./Results.scss";
 
-const Results = () => {
+const Results = React.memo(() => {
   const columns = [
     {
       title: "Дарслар",
@@ -142,6 +142,6 @@ const Results = () => {
       />
     </section>
   );
-};
+});
 
 export default Results;

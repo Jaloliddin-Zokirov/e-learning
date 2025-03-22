@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Docs = () => {
+const Docs = React.memo(() => {
   return (
     <section>Docs</section>
   )
-}
+})
 
 export default Docs

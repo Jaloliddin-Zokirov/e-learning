@@ -1,6 +1,6 @@
 import React from "react";
 
-const _myInfo = () => {
+const _myInfo = React.memo(() => {
   return (
     <ul className="w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-8 gap-y-6">
       <li>
@@ -53,6 +53,6 @@ const _myInfo = () => {
       </li>
     </ul>
   );
-};
+});
 
 export default _myInfo;

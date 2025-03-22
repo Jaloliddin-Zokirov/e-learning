@@ -8,11 +8,17 @@ import { RiUserSettingsLine } from "react-icons/ri";
 import { SlDocs } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ isOpen, isClose }) => {
+const Navbar = React.memo(({ isOpen, isClose }) => {
   const [onModal, setOnModal] = useState(false);
 
   return (
     <>
+      <div
+        className={`${
+          isOpen ? "right-0" : "right-[100%]"
+        } absolute top-0 bottom-0 left-0 z-[35] transition-all duration-400 ease-in-out bg-[#00000092]`}
+        onClick={() => isClose(false)}
+      ></div>
       <div
         className={`${isOpen ? "left-0" : "-left-full"} ${
           onModal ? "max-w-[90px] px-5" : "max-w-[348px] px-6"
@@ -41,11 +47,13 @@ const Navbar = ({ isOpen, isClose }) => {
                   alt="site logo"
                 />
               </Link>
-              {!onModal && (
-                <p className="text-[0.6875rem] font-bold text-white w-[183px]">
-                  ИЖТИМОИЙ ҲИМОЯ ТИЗИМИ ХОДИМЛАРИНИНГ МАЛАКАСИНИ ОШИРИШ МАРКАЗИ
-                </p>
-              )}
+              <p
+                className={`text-[0.6875rem] font-bold text-white w-[183px] ${
+                  onModal ? "hidden" : ""
+                }`}
+              >
+                ИЖТИМОИЙ ҲИМОЯ ТИЗИМИ ХОДИМЛАРИНИНГ МАЛАКАСИНИ ОШИРИШ МАРКАЗИ
+              </p>
             </div>
             {!onModal && (
               <button
@@ -55,20 +63,14 @@ const Navbar = ({ isOpen, isClose }) => {
                 }}
               >
                 <svg
-                  data-v-d425c321=""
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon-tabler icon-tabler-chevron-left"
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
+                  width="24"
+                  height="24"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  stroke="currentColor"
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M15 6l-6 6l6 6"></path>
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <path d="m15 6-6 6 6 6" />
                 </svg>
               </button>
             )}
@@ -126,6 +128,6 @@ const Navbar = ({ isOpen, isClose }) => {
       </div>
     </>
   );
-};
+});
 
 export default Navbar;

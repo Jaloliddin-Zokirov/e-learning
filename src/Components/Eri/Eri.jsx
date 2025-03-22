@@ -2,7 +2,7 @@ import { Button, Form, Input } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Eri = () => {
+const Eri = React.memo(() => {
   const [form] = Form.useForm();
   return (
     <div className="h-full flex flex-col items-center justify-center">
@@ -53,6 +53,6 @@ const Eri = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Eri;
