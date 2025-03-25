@@ -8,11 +8,11 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (!localStorage.getItem("token")) {
-  //     navigate("/login");
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     <div className="flex items-start h-full">

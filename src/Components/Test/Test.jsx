@@ -4,16 +4,16 @@ import { FiX } from "react-icons/fi";
 
 const Test = ({ isClose, isResult, isAnswer }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState({}); // Savolga javoblar saqlanadi
+  const [answers, setAnswers] = useState({});
 
   const currentQuestion = test[currentIndex];
-  const currentAnswer = answers[currentQuestion.id] || ""; // Hozirgi savolga javob
+  const currentAnswer = answers[currentQuestion.id] || "";
 
   const handleChange = (evt) => {
     const value = evt.target.value;
     setAnswers((prev) => ({
       ...prev,
-      [currentQuestion.id]: value, // Hozirgi savolga javobni saqlash
+      [currentQuestion.id]: value,
     }));
   };
 
@@ -28,58 +28,55 @@ const Test = ({ isClose, isResult, isAnswer }) => {
   };
 
   return (
-    <div className="absolute inset-0">
-      <div
-        className="absolute z-50 inset-0 bg-[#00000092]"
-        onClick={() => isClose(false)}
-      ></div>
-      <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-[60] bg-white w-[800px] p-4 rounded-lg">
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 z-10 bg-[#000000b1]"></div>
+      <div className="relative z-20 bg-white md:w-full md:max-w-[800px] w-[90%] p-6 rounded-xl shadow-2xl transform transition-all">
         <button
-          className="ml-auto block mb-4 cursor-pointer"
+          className="absolute top-4 right-4 text-gray-500 hover:text-red-500"
           onClick={() => isClose(false)}
         >
           <FiX size={24} />
         </button>
 
-        <div key={currentQuestion.id} className="mb-6">
-          <h2 className="text-xl font-semibold mb-3 text-center uppercase">
-            {currentQuestion.question}
-          </h2>
-          <ul className="flex items-center justify-between flex-wrap space-y-4">
-            {Object.entries(currentQuestion.answers).map(([key, value]) => (
-              <li className="w-[47%]" key={key}>
-                <label
-                  className={`block p-2 rounded cursor-pointer ${
-                    currentAnswer === key
-                      ? "bg-[#2964c2] text-white"
-                      : "bg-gray-100"
-                  }`}
-                >
-                  <input
-                    className="hidden"
-                    type="radio"
-                    name={`question-${currentQuestion.id}`}
-                    value={key}
-                    checked={currentAnswer === key} // <-- Checked holatini belgilash
-                    onChange={handleChange}
-                  />
-                  {key.toUpperCase()}: {value}
-                </label>
-              </li>
-            ))}
-          </ul>
-          <button
-            className={`w-full mt-4 px-4 py-2 rounded transition ${
-              currentAnswer
-                ? "bg-[#2964c2] text-white cursor-pointer"
-                : "bg-gray-300 text-gray-500 cursor-not-allowed"
-            }`}
-            onClick={handleNext}
-            disabled={!currentAnswer} // <-- Javob tanlanmasa, tugma ishlamaydi
-          >
-            {currentIndex === test.length - 1 ? "Finish" : "Next"}
-          </button>
-        </div>
+        <h2 className="text-2xl font-bold text-center text-gray-900 uppercase mb-5">
+          {currentQuestion.question}
+        </h2>
+
+        <ul className="flex flex-wrap gap-4 justify-center">
+          {Object.entries(currentQuestion.answers).map(([key, value]) => (
+            <li className="w-full md:w-[48%]" key={key}>
+              <label
+                className={`block p-3 text-lg font-medium text-center rounded-lg transition-all cursor-pointer ${
+                  currentAnswer === key
+                    ? "bg-blue-600 text-white shadow-md"
+                    : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                }`}
+              >
+                <input
+                  className="hidden"
+                  type="radio"
+                  name={`question-${currentQuestion.id}`}
+                  value={key}
+                  checked={currentAnswer === key}
+                  onChange={handleChange}
+                />
+                {key.toUpperCase()}: {value}
+              </label>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          className={`w-full mt-6 py-3 text-lg font-semibold rounded-lg transition-all cursor-pointer ${
+            currentAnswer
+              ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg"
+              : "bg-gray-300 text-gray-500 cursor-not-allowed"
+          }`}
+          onClick={handleNext}
+          disabled={!currentAnswer}
+        >
+          {currentIndex === test.length - 1 ? "Finish" : "Next"}
+        </button>
       </div>
     </div>
   );

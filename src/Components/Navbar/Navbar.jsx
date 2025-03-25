@@ -40,20 +40,15 @@ const Navbar = React.memo(({ isOpen, isClose }) => {
                 onClick={() => isClose(false)}
                 to={"/"}
               >
-                <img
-                  src="https://e-learning.istc.uz/assets/logo-CP4jwA-y.svg"
-                  width={55}
-                  height={51}
-                  alt="site logo"
-                />
+                <img src="PSYEDU.svg" width={85} height={85} alt="site logo" />
               </Link>
-              <p
+              {/* <p
                 className={`text-[0.6875rem] font-bold text-white w-[183px] ${
                   onModal ? "hidden" : ""
                 }`}
               >
                 ИЖТИМОИЙ ҲИМОЯ ТИЗИМИ ХОДИМЛАРИНИНГ МАЛАКАСИНИ ОШИРИШ МАРКАЗИ
-              </p>
+              </p> */}
             </div>
             {!onModal && (
               <button
@@ -121,7 +116,7 @@ const Navbar = React.memo(({ isOpen, isClose }) => {
           </nav>
         </div>
         <div className="w-full flex flex-col items-center">
-          {!onModal && <p className="text-white">www.istc.uz</p>}
+          {!onModal && <p className="text-white">PSYEDU</p>}
           <div className="w-full h-[1px] mt-1 mb-2 bg-[linear-gradient(90deg,_#fff0,_#00ff58_51%,_#fff0)]"></div>
           {!onModal && <p className="text-white">2025</p>}
         </div>

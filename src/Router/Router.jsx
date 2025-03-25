@@ -7,7 +7,7 @@ import Results from "../Pages/Results/Results";
 import Certificate from "../Pages/Certificate/Certificate";
 import Docs from "../Pages/Docs/Docs";
 import Login from "../Pages/Login/Login";
-import Eri from "../Components/Eri/Eri";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     ],
   },
   { path: "login", element: <Login /> },
-  { path: "LoginByESign", element: <Eri /> },
+  { path: "register", element: <Register /> },
 ]);
 
 export default router;

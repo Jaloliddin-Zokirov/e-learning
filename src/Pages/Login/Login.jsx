@@ -1,10 +1,14 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
-import { Link } from "react-router-dom";
-import _eri from "../../Components/Eri/Eri";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = React.memo(() => {
-  const [form] = Form.useForm();
+  const navigate = useNavigate()
+  
+  const handleSubmit = (evt) => {
+    localStorage.setItem("token", JSON.stringify(evt))
+    navigate("/")
+  };
 
   return (
     <div className="h-full flex flex-col items-center justify-center">
@@ -12,7 +16,7 @@ const Login = React.memo(() => {
         <Link className="block mb-5" to={"/"}>
           <img
             className="mx-auto"
-            src="logo.svg"
+            src="Logo.svg"
             width={138}
             height={138}
             alt="site logo"
@@ -20,22 +24,23 @@ const Login = React.memo(() => {
         </Link>
         <Form
           layout={"vertical"}
-          form={form}
+          onFinish={handleSubmit}
           initialValues={{
             layout: "vertical",
+            remember: false,
           }}
           style={{
             maxWidth: 600,
           }}
         >
-          <Form.Item name="login" label="Логин">
+          <Form.Item name="login" label="Login" rules={[{ required: true, message: "Bu yerga loginingizni yozing" }]}>
             <Input />
           </Form.Item>
-          <Form.Item name="password" label="Парол">
+          <Form.Item name="password" label="Parol" rules={[{ required: true, message: "Bu yerga parolingizni yozing" }]}>
             <Input.Password />
           </Form.Item>
-          <Form.Item>
-            <Checkbox>Эслаб қол?</Checkbox>
+          <Form.Item name="remember" valuePropName="checked">
+            <Checkbox>Meni eslab qol.</Checkbox>
           </Form.Item>
           <div className="flex flex-col gap-2">
             <Button
@@ -45,51 +50,19 @@ const Login = React.memo(() => {
                 padding: "7px 16px",
                 background: "#0FB48C",
               }}
+              htmlType="submit"
             >
-              Кириш
+              Kirish
             </Button>
-            <div className="flex items-center justify-between gap-6">
-              <Button
-                style={{
-                  width: "100%",
-                  padding: "0",
-                  color: "white",
-                  background: "#0FB48C",
-                }}
-              >
-                <Link className="w-full px-4 py1.5" to={"/LoginByESign"}>ЭРИ</Link>
-              </Button>
-              <Button
-                style={{
-                  width: "100%",
-                  padding: "0",
-                  color: "white",
-                  background: "#4825C2",
-                }}
-              >
-                <Link
-                  className="w-full px-4 py-1.5 text-center"
-                  to={"https://id.egov.uz/"}
-                >
-                  <img
-                    className="inline-block"
-                    src="oneID.svg"
-                    width={60}
-                    height={19}
-                    alt="oneId icon"
-                  />
-                </Link>
-              </Button>
-            </div>
+
             <Button
+              type="link"
               style={{
                 width: "100%",
-                padding: "7px 16px",
-                background: "#539BFF",
-                color: "white",
+                color: "#0FB48C",
               }}
             >
-              Мобил иловани юклаш
+              <Link to={"/register"}>Ro'yxatdan o'tish</Link>
             </Button>
           </div>
         </Form>

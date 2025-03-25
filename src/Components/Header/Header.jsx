@@ -1,14 +1,20 @@
 import React, { useState } from "react";
-import { FaRegUser } from "react-icons/fa";
 import { HiOutlineXMark } from "react-icons/hi2";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoExitOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Header = React.memo(({ isOpen }) => {
   const [check, setCheck] = useState(false);
+  const navigate = useNavigate();
 
   const handleBack = () => {
     window.history.back();
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
   };
   return (
     <header className="w-full mx-auto">
@@ -33,7 +39,7 @@ const Header = React.memo(({ isOpen }) => {
             className="ml-auto cursor-pointer"
             onClick={() => setCheck(!check)}
           >
-            <FaRegUser size={39} />
+            <img src="user.svg" width={49} height={49} alt="user icon" />
           </button>
         </div>
         <div
@@ -43,7 +49,7 @@ const Header = React.memo(({ isOpen }) => {
         >
           <div className="flex items-start justify-between">
             <div className="flex sm:flex-row flex-col items-start gap-2 sm:mb-6 mb-3">
-              <FaRegUser className="sm:text-[39px] text-[24px]" />
+              <img src="user.svg" width={49} height={49} alt="user icon" />
               <p className="sm:text-lg text-sm">AMONBOYEV. A</p>
             </div>
             <HiOutlineXMark
@@ -52,9 +58,12 @@ const Header = React.memo(({ isOpen }) => {
               onClick={() => setCheck(false)}
             />
           </div>
-          <button className="flex items-center gap-2 py-2 px-3 rounded-sm cursor-pointer w-full text-white font-medium bg-[#bd1414]">
+          <button
+            className="flex items-center gap-2 py-2 px-3 rounded-sm cursor-pointer w-full text-white font-medium bg-[#bd1414]"
+            onClick={handleLogout}
+          >
             <IoExitOutline className="sm:text-[24px] text-[18px]" />
-            <span className="sm:text-lg text-sm">Чиқиш</span>
+            <span className="sm:text-lg text-sm">Chiqish</span>
           </button>
         </div>
       </div>
@@ -65,7 +74,7 @@ const Header = React.memo(({ isOpen }) => {
         <div className="text-white bg-[#2964c2] w-7 h-7 rounded-full flex flex-col items-center justify-center">
           <IoIosArrowBack />
         </div>
-        Орқага
+        Orqaga
       </button>
       {check && (
         <div
