@@ -7,14 +7,9 @@ const Footer = React.memo(() => {
       <div className="flex items-start justify-between flex-wrap gap-4 max-w-[90%] mx-auto pt-8 px-4 pb-16">
         <div>
           <Link to={"/"} className="flex items-center gap-2.5 w-[244px] mb-8">
-            <img
-              src="https://e-learning.istc.uz/assets/logo-CP4jwA-y.svg"
-              width={51}
-              height={47}
-              alt="site logo"
-            />
+            <img src="PSYEDU.svg" width={85} height={85} alt="site logo" />
             <p className="text-[0.6875rem] font-bold text-white">
-              ИЖТИМОИЙ ҲИМОЯ ТИЗИМИ ХОДИМЛАРИНИНГ МАЛАКАСИНИ ОШИРИШ МАРКАЗИ
+              Maktab psixologlarining tajribasini oshirish platformasi
             </p>
           </Link>
           <ul className="flex items-center gap-3.5">
@@ -51,7 +46,7 @@ const Footer = React.memo(() => {
               </Link>
             </li>
             <li>
-              <Link className="flex flex-col items-center justify-center text-[#2964c2] w-8 h-8 bg-white rounded-lg">
+              <Link className="flex flex-col items-center justify-center text-[#2964c2] w-8 h-8 bg-white rounded-lg" to={'/'}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1rem"
@@ -69,25 +64,24 @@ const Footer = React.memo(() => {
           </ul>
         </div>
         <div className="w-full max-w-[360px] h-[187px]">
-          {/* <iframe
+          <iframe
             className="rounded-xl w-full max-w-[320px] sm:max-w-[360px]"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.6099937033136!2d69.21651308245748!3d41.273826899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a6bb3fcc899%3A0xc7267858e6e3f819!2sNurkhan%20St%2021%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1742384140507!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.899290307712!2d69.21183067624544!3d41.35454267130387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c3fa12f11a3%3A0xc849830383f1974d!2sA.AVLONIY%20NOMIDAGI%20PEDAGOGLARNI%20KASBIY%20RIVOJLANTIRISH%20VA%20YANGI%20METODIKALARGA%20O&#39;RGATISH%20MILLIY-TADQIQOT%20INSTITUTI!5e0!3m2!1sen!2s!4v1742970755489!5m2!1sen!2s"
             width="360"
             height="187"
-            allowFullScreen
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Nurkhan Street 21, Tashkent Map Location"
-          ></iframe> */}
-          <img
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          {/* <img
             src="mapImage.png"
             width={360}
             height={187}
             alt="Nurkhan Street 21, Tashkent Map Location"
             className="rounded-xl w-full max-w-[320px] sm:max-w-[360px]"
-          />
+          /> */}
           <p className="text-white font-semibold text-[0.75rem] underline">
-            Тошкент шаҳри, Чилонзор тумани, Нурҳон кўчаси, 21-уй
+            Abdulla Avloniy nomidagi pedagogik mahorat milliy instituti
           </p>
         </div>
         <ul className="flex flex-col gap-4">
@@ -104,10 +98,10 @@ const Footer = React.memo(() => {
                 <path stroke="none" d="M0 0h24v24H0z" />
                 <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
               </svg>
-              Телефон
+              Telefon
             </p>
-            <a className="text-[0.87rem] text-white" href="tel:+998555120066">
-              +998 55 512 00 66
+            <a className="text-[0.87rem] text-white" href="tel:+998975131905">
+              +998 97 513 19 05
             </a>
           </li>
           <li>
@@ -124,20 +118,14 @@ const Footer = React.memo(() => {
                 <path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
                 <path d="m3 7 9 6 9-6" />
               </svg>
-              маил
+              Elektron pochta
             </p>
             <div className="flex flex-col">
               <a
                 className="text-[0.87rem] text-white"
-                href="mailto:ihmamarkaz@exat.uz"
+                href="mailto:jumanoverdavlat701@gmail.com"
               >
-                ihmamarkaz@exat.uz
-              </a>
-              <a
-                className="text-[0.87rem] text-white"
-                href="mailto:info@istc.uz"
-              >
-                info@istc.uz
+                jumanoverdavlat701@gmail.com
               </a>
             </div>
           </li>
@@ -157,11 +145,11 @@ const Footer = React.memo(() => {
                 <path d="M11.5 3a17 17 0 0 0 0 18" />
                 <path d="M12.5 3a17 17 0 0 1 0 18" />
               </svg>
-              wебсите
+              Veb-sayt
             </p>
-            <a className="text-[0.87rem] text-white" href="">
-              www.istc.uz
-            </a>
+            <Link className="text-[0.87rem] text-white" to="/">
+              www.psyedu.uz
+            </Link>
           </li>
         </ul>
       </div>

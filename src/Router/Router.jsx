@@ -5,9 +5,9 @@ import PersonalInfo from "../Pages/PersonalInfo/PersonalInfo";
 import Education from "../Pages/Education/Education";
 import Results from "../Pages/Results/Results";
 import Certificate from "../Pages/Certificate/Certificate";
-import Docs from "../Pages/Docs/Docs";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import Tests from "../Pages/Tests/Tests";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       { path: "education-wrapper", element: <Education /> },
       { path: "results", element: <Results /> },
       { path: "certificate-programs", element: <Certificate /> },
-      { path: "docs-programs", element: <Docs /> },
+      { path: "tests", element: <Tests /> },
     ],
   },
   { path: "login", element: <Login /> },

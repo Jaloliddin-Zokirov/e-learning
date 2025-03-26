@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { GrCertificate } from "react-icons/gr";
 import { IoHomeOutline } from "react-icons/io5";
 import { LiaAwardSolid } from "react-icons/lia";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { MdCastForEducation, MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { PiStudent } from "react-icons/pi";
 import { RiUserSettingsLine } from "react-icons/ri";
-import { SlDocs } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 const Navbar = React.memo(({ isOpen, isClose }) => {
@@ -36,19 +35,19 @@ const Navbar = React.memo(({ isOpen, isClose }) => {
           <div className="flex items-center ">
             <div className="w-full flex items-center gap-4">
               <Link
-                className="w-[55] h-[51] block"
+                className="w-[85] h-[85] block"
                 onClick={() => isClose(false)}
                 to={"/"}
               >
                 <img src="PSYEDU.svg" width={85} height={85} alt="site logo" />
               </Link>
-              {/* <p
-                className={`text-[0.6875rem] font-bold text-white w-[183px] ${
+              <p
+                className={`text-[0.6875rem] font-bold text-white w-[160px] ${
                   onModal ? "hidden" : ""
                 }`}
               >
-                ИЖТИМОИЙ ҲИМОЯ ТИЗИМИ ХОДИМЛАРИНИНГ МАЛАКАСИНИ ОШИРИШ МАРКАЗИ
-              </p> */}
+                Maktab psixologlarining tajribasini oshirish platformasi
+              </p>
             </div>
             {!onModal && (
               <button
@@ -76,42 +75,42 @@ const Navbar = React.memo(({ isOpen, isClose }) => {
               to={"/"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
-              <IoHomeOutline size={26} /> {!onModal && "Home"}
+              <IoHomeOutline size={26} /> {!onModal && "Uy"}
             </Link>
             <Link
               onClick={() => isClose(false)}
               to={"/personal-info"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
-              <RiUserSettingsLine size={26} /> {!onModal && "Personal Info"}
+              <RiUserSettingsLine size={26} /> {!onModal && "Shaxsiy ma'lumotlar"}
             </Link>
             <Link
               onClick={() => isClose(false)}
               to={"/education-wrapper"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
-              <PiStudent size={26} /> {!onModal && "Education"}
+              <PiStudent size={26} /> {!onModal && "Ta'lim"}
             </Link>
             <Link
               onClick={() => isClose(false)}
               to={"/results"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
-              <LiaAwardSolid size={26} /> {!onModal && "Results"}
+              <LiaAwardSolid size={26} /> {!onModal && "Natijalar"}
             </Link>
             <Link
               onClick={() => isClose(false)}
               to={"/certificate-programs"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
-              <GrCertificate size={26} /> {!onModal && "Certificate Programs"}
+              <GrCertificate size={26} /> {!onModal && "Sertifikatlar"}
             </Link>
             <Link
               onClick={() => isClose(false)}
-              to={"/docs-programs"}
+              to={"/tests"}
               className="flex items-center gap-3 py-2.5 px-3 text-white font-medium border border-[transparent] bg-[#3475db] rounded-lg w-full text-[18px]"
             >
-              <SlDocs size={26} /> {!onModal && "Docs Programs"}
+              <MdCastForEducation size={26} /> {!onModal && "Testlar"}
             </Link>
           </nav>
         </div>

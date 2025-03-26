@@ -18,7 +18,7 @@ function App() {
     <div className="flex items-start h-full">
       <Navbar isOpen={openModal} isClose={setOpenModal} />
       <div className="flex flex-col min-h-screen w-full h-full overflow-x-hidden">
-        <div className="flex-grow w-[90%] mx-auto pt-8 px-4 pb-16">
+        <div className="flex-grow w-full sm:w-[90%] mx-auto pt-8 px-4 pb-16">
           <Header isOpen={setOpenModal} />
           <main>
             <Outlet />

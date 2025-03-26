@@ -1,7 +1,7 @@
 .my-collapse {
   background: #fff;
   border: 1px solid #2964c2;
-  margin: 1rem;
+  margin: 0.5rem 0;
   padding: 0.6rem;
   border-radius: 1rem;
   box-shadow: 0px 2px 4px 0px #2964c21a, -1px 6px 6px 0px #2964c217,
@@ -20,6 +20,15 @@
   & .ant-collapse-expand-icon {
     margin: 0;
     padding: 0;
+  }
+}
+
+.my-collapse
+  .ant-collapse-item
+  > .ant-collapse-content
+  > .ant-collapse-content-box {
+  @media only screen and (max-width: 900px) {
+    padding: 0 10px;
   }
 }
 

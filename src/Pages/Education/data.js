@@ -11,7 +11,7 @@ const data = [
             id: "course-1-module-1-lesson-1",
             title: "1-dars",
             content: {
-              video: "1",
+              video: "https://s3.us-east-005.backblazeb2.com/audio-uploads/0cb0ad10-912a-4061-8ef5-1d45fbc99b48.mp4",
               pdf: "https://docs.google.com/document/d/1LcgliP7lkii6XhMOPzxMjzXE7dsIh2I4PYYX554Fzmk/preview",
               downloadPDF: 'https://docs.google.com/document/d/1LcgliP7lkii6XhMOPzxMjzXE7dsIh2I4PYYX554Fzmk/export?format=pdf',
               ppt: "https://docs.google.com/presentation/d/17wQFoqUEyONsuZ2JYAssFXewnL7XB--f3ans_xWsgR4/preview",

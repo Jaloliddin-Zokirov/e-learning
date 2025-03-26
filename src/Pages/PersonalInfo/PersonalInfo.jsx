@@ -24,10 +24,10 @@ const PersonalInfo = React.memo(() => {
         </div>
         <div className="w-full h-[1px] bg-[#2964c2] mb-6"></div>
         <_myInfo />
-        <p className="text-[#2964c2] font-medium text-center text-xl mt-6">
+        {/* <p className="text-[#2964c2] font-medium text-center text-xl mt-6">
           *Malumotlaringiz davlat bazasidan olingan bo‘lib ularni tahrirlash
           imkoni yo‘q
-        </p>
+        </p> */}
       </div>
     </section>
   );

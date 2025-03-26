@@ -1,6 +1,7 @@
 import React from "react";
 import { Collapse } from "antd";
 import LessonFileCard from "../LessonFileCard/LessonFileCard";
+import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 const LessonItem = ({
   lessons,
@@ -28,13 +29,10 @@ const LessonItem = ({
           label: lessons?.title,
           children: (
             <>
-              <video className="w-9/12 h-60 mx-auto mb-6 rounded-xl bg-amber-600">
-                {lessons?.content?.video
-                  ? lessons?.content?.video
-                  : "Darslik hali joylanmadi"}
-              </video>
-              <div className="w-full flex items-center justify-around gap-5 mb-6">
-                <div className="w-2/5">
+              <VideoPlayer videoSrc={lessons?.content?.video} />
+              {console.log(lessons?.content?.video)}
+              <div className="w-full flex items-center justify-around flex-wrap gap-5 mb-6">
+                <div className="w-full md:w-2/5">
                   {lessons?.content?.pdf ? (
                     <LessonFileCard
                       fileType="pdf"
@@ -50,7 +48,7 @@ const LessonItem = ({
                   )}
                 </div>
 
-                <div className="w-2/5">
+                <div className="w-full md:w-2/5">
                   {lessons?.content?.ppt ? (
                     <LessonFileCard
                       fileType="ppt"
